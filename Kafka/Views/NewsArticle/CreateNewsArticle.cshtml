@@ -1,0 +1,65 @@
+﻿@using Kafka.Database
+@using Kafka.Database.Entities
+@model NewsArticle
+
+@{
+}
+    
+
+<div class="container mx-auto row justify-content-center">
+    <h2 class="text-center col-12 m-2 p-2">Edit article</h2>
+
+    <div class="align-self-center justify-content-center text-center">
+        <form action="/NewsArticle/UpdateArticle" name="theform" id="theform" method="post">
+            <div class="row col-lg-6">
+                <div class="form-group col-6">
+                    <div class="col-12">
+                        <label for="newsArticleTitle">Title</label>
+                        <input type="text" name="newsArticleTitle" value="" class="form-control" id="newsArticleTitle" />
+                    </div>
+                </div>
+                
+                <div class="form-group col-6">
+                    <div class="col-12">
+                        <label for="newsArticleDate">Date</label>
+                        <input type="text" name="newsArticleDate" value="" class="form-control" id="newsArticleDate" />
+                    </div>
+                </div>
+
+                <div class="form-group col-12">
+                    <div class="col-12">
+                        <label for="newsArticlePreamble">Preamble</label>
+                        <textarea type="text" name="newsArticlePreamble" class="form-control" id="newsArticlePreamble"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group col-6">
+                    <div class="col-12">
+                        <label for="newsArticleImage">Image</label>
+                        <img src="/" type="text" class="img-thumbnail" id="newsArticleImage" />
+                    </div>
+                </div>
+
+                <div class="form-group col-6">
+                    <div class="col-12">
+                        <label for="newsArticleCategory">Category</label>
+                        <input type="text" name="newsArticleCategory" value="" class="form-control" id="newsArticleCategory" />
+                    </div>
+                </div>
+
+                <div class="form-group col-12 text-center">
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>                
+                <div class="form-group col-12 text-center">
+                    <a href="/NewsArticle/DeleteArticle?id=" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-dark" href="/NewsArticle/NewsArticles">Back to Articles</a>
+</div>
+
+

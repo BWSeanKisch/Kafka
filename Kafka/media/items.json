@@ -1,0 +1,50 @@
+[
+	{
+		"id": "8a6968b6-376e-44f0-a649-b60779028a80",
+		"title": "It showed a lady fitted out with a fur hat and fur boa who sat upright",
+		"preamble": "Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. How about if I sleep a little bit longer and forget all this nonsense...",
+		"image": "media/image01.jpg",
+		"date": "2020-05-26",
+		"category": "kafka"
+	},
+	{
+		"id": "af6968b6-576e-4420-9649-b60776028a80",
+		"title": "Kafka is turning into a bug!",
+		"preamble": "Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.",
+		"image": "media/image02.jpg",
+		"date": "2020-05-21",
+		"category": "kafka"
+	},
+	{
+		"id": "1a6968b6-376e-44f0-9649-b60779028a80",
+		"title": "What's happened to me?",
+		"preamble": "It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.",
+		"image": "media/image03.jpg",
+		"date": "2020-05-13",
+		"category": "bug"
+	},
+	{
+		"id": "7a6968b6-376e-44f0-b649-b60779028a80",
+		"title": "What a strenuous career it is that I've chosen!",
+		"preamble": "Travelling day in and day out. Doing business like this takes much more effort than doing your own business at home, and on top of that there's the curse of travelling, worries about making train connections, bad...",
+		"image": "media/image04.jpg",
+		"date": "2020-04-29",
+		"category": "breaking news"
+	},
+	{
+		"id": "7a6968b6-376e-54f0-9649-b60779028a80",
+		"title": "How about if I sleep a little bit longer and forget all this nonsense",
+		"preamble": "but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.",
+		"image": "media/image05.jpg",
+		"date": "2020-04-11",
+		"category": "kafka"
+	},
+	{
+		"id": "7a6968b6-376e-44f0-b649-b60779028a85",
+		"title": "Drops of rain could be heard hitting the pane",
+		"preamble": "Well, there's still some hope; once I've got the money together to pay off my parents' debt to him - another five or six years I suppose - that's definitely what I'll do. That's when I'll make the big change",
+		"image": "media/image06.jpg",
+		"date": "2020-04-02",
+		"category": "breaking news"
+	}
+]

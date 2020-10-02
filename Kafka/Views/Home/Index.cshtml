@@ -1,0 +1,126 @@
+﻿@using Kafka.Controllers
+@using Kafka.Database.Entities
+@using Newtonsoft.Json
+@{
+
+}
+
+<body>
+    <div class="header">
+        <a href="/" title="The Metamorphosis by Kafka"><img class="logo" src="/static/img/bug.svg" alt="The Metamorphosis by Kafka"></a>
+    </div>
+        <a class="btn btn-dark" href="/NewsArticle/">Manage articles</a>
+
+        <main role="main" class="container">
+
+        <div class="row align-items-start justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+                <h1>The Metamorphosis</h1>
+                <p class="lead">One of Kafka's best-known works, The Metamorphosis tells the story of salesman Gregor Samsa who wakes one morning to find himself inexplicably transformed into a huge insect.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-start justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+                <h2>The Kafka news</h2>
+                <ul id="items" data-items-url="/media/items.json" data-item-url="/media/item.json" data-count="4" class="item-list">
+                    <div class="loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </ul>
+                <a href="?allnews=1" class="btn btn-primary" id="allnews">Load all Kafka news</a>
+            </div>
+        </div>
+
+        <div class="row align-items-start justify-content-center padding-top-60">
+            <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="box">
+                    <div class="box-image">
+                        <img src="/media/image07.jpg">
+                    </div>
+                    <div class="box-body">
+                        <h4>The next train went at seven</h4>
+                        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="box">
+                    <div class="box-image">
+                        <img src="/media/image07.jpg">
+                    </div>
+                    <div class="box-body">
+                        <h4>Well, there's still some hope</h4>
+                        <p>Had the alarm clock not rung? He could see from the bed that it had been set for four o'clock as it should have been; it certainly must have rung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row align-items-start justify-content-center">
+                <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+                    <p>No copyrights by site owner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback" id="feedback" data-toggle="modal" data-target="#feedbackmodal">Give feedback <img src="~/static/img/feedback.svg"></div>
+
+    <div class="modal fade" id="feedbackmodal" tabindex="-1" role="dialog" aria-labelledby="feedbackmodaltitle" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <form action="/sendfeedback" name="feedbackform" id="feedbackform" method="POST">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title" id="feedbackmodaltitle">We value your feedback!</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="feedbackwrapper">
+                        <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                            <label for="feedbacktype">What type of feedback do you want to give?</label>
+                            <select class="form-control" name="feedbacktype" id="feedbacktype">
+                                <option value="0">I have general feedback</option>
+                                <option value="1">I want to comment on the bug</option>
+                                <option value="2">I have feedback concerning the metamorphosis</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                            <label id="contentlabel">Write your feedback here</label>
+                            <textarea class="form-control" name="content" id="content" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group col-sm-12 col-md-12 col-lg-12 text-center">
+                            <a href="#" id="sendfeedback" class="btn btn-primary full-width">Send feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="itemmodal" tabindex="-1" role="dialog" aria-labelledby="itemmodaltitle" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="itemmodaltitle"></span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12 col-md-12 col-lg-12" id="itemmodalbodyheader"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12" id="itemmodalbody"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
