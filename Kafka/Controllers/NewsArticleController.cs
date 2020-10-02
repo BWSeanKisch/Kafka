@@ -72,7 +72,11 @@ namespace Kafka.Controllers
             return View(model);
 
         }
-
+        /// <summary>
+        /// Deletes article by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult DeleteArticle(int id)
         {
             NewsArticleManager.Delete(id);
