@@ -72,8 +72,8 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
@@ -337,13 +337,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="static\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
   </ItemGroup>
